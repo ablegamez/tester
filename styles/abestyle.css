@@ -1,0 +1,65 @@
+
+
+html {
+    text-align: center;
+}
+
+body {
+    background-color: lightgreen;
+    margin: auto;
+    width: 90%;
+}
+
+a {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: #dbc2c0;
+  color: rgb(133, 62, 62);
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:visited {
+  background-color: #f1e0df;
+  color: rgb(184, 88, 88);
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+  color: black;
+}
+
+button {
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#bodyDiv {
+    background-color: lightblue;
+
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: lightgoldenrodyellow;
+  color: blue;
+  text-align: center;
+}
+
