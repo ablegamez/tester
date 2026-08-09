@@ -175,11 +175,22 @@ function getBmi() {
   document.getElementById("bmiTxt").value = bmiLevel;
 }
 
-function checkGender() {
-  alert(document.getElementById("genderCheck").value);
+const checkbox = document.getElementById("genderCheck");
+
+checkbox.addEventListener("change", function () {
   if (this.checked) {
-    alert("Male");
+    console.log("Checkbox is checked");
   } else {
-    alert("Female");
+    console.log("Checkbox is unchecked");
   }
-}
+});
+
+// function checkGender() {
+//   alert(document.getElementById("genderCheck").value);
+//   const checkedBox = document.getElementById("genderCheck").value
+//   if (this.checked) {
+//     alert("Male");
+//   } else {
+//     alert("Female");
+//   }
+// }
