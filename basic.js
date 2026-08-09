@@ -9,7 +9,7 @@ Yac Nursing
 */
 
 window.onload = function () {
-  //alert("Onload");
+  alert("Onload");
 
   startTime = Math.floor(Math.random() * (1045 - 1007 + 1)) + 1007;
 
