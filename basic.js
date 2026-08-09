@@ -180,6 +180,11 @@ document.getElementById("genderCheck").addEventListener("change", function () {
   checkGender();
 });
 
+document.getElementById("memberDxBox").addEventListener("blur", function () {
+  //console.log(this.checked);
+  start6516();
+});
+
 function checkGender() {
   //alert(document.getElementById("genderCheck").value);
   //const checkedBox = document.getElementById("genderCheck").value
@@ -188,4 +193,8 @@ function checkGender() {
   } else {
     alert("Female");
   }
+}
+
+function start6516() {
+  alert("Start6516");
 }
