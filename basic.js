@@ -176,15 +176,16 @@ function getBmi() {
 }
 
 document.getElementById("genderCheck").addEventListener("change", function () {
-  console.log(this.checked);
+  //console.log(this.checked);
+  checkGender();
 });
 
-// function checkGender() {
-//   alert(document.getElementById("genderCheck").value);
-//   const checkedBox = document.getElementById("genderCheck").value
-//   if (this.checked) {
-//     alert("Male");
-//   } else {
-//     alert("Female");
-//   }
-// }
+function checkGender() {
+  //alert(document.getElementById("genderCheck").value);
+  //const checkedBox = document.getElementById("genderCheck").value
+  if (document.getElementById("genderCheck").checked) {
+    alert("Male");
+  } else {
+    alert("Female");
+  }
+}
