@@ -175,14 +175,8 @@ function getBmi() {
   document.getElementById("bmiTxt").value = bmiLevel;
 }
 
-const checkbox = document.getElementById("genderCheck");
-
-checkbox.addEventListener("change", function () {
-  if (this.checked) {
-    console.log("Checkbox is checked");
-  } else {
-    console.log("Checkbox is unchecked");
-  }
+document.getElementById("genderCheck").addEventListener("change", function () {
+  console.log(this.checked);
 });
 
 // function checkGender() {
