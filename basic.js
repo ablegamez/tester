@@ -177,9 +177,9 @@ function getBmi() {
 
 function checkGender() {
   alert(document.getElementById("genderCheck").value);
-  if (document.getElementById("genderCheck").value == "on") {
+  if (this.checked) {
     alert("Male");
   } else {
-    alert("Femail");
+    alert("Female");
   }
 }
