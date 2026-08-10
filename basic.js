@@ -270,13 +270,13 @@ function start6516() {
 
 function bathingText() {
   bathingTxt = memberData.starttext + " Bathing.";
-  return navigator.clipboard.writeText(bathingTxt);
   console.log(bathingTxt);
   alert("Start6516\nPaste bathing.");
+  return navigator.clipboard.writeText(bathingTxt);
 }
 function dressingText() {
   dressingTxt = memberData.starttext + "dressing.";
-  return navigator.clipboard.writeText(dressingTxt);
   console.log(dressingTxt);
   alert("Paste dressing.");
+  return navigator.clipboard.writeText(dressingTxt);
 }
