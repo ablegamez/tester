@@ -259,7 +259,7 @@ function checkGender() {
 }
 
 function start6516() {
-  alert("Start6516");
+  alert("Start6516\nStarting with bathing.");
   dressingTxt =
     memberData.name +
     " has the following functional limitations: " +
