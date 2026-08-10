@@ -264,6 +264,6 @@ function start6516() {
     memberData.name +
     " has the following functional limitations: " +
     memberData.symp;
-
+  navigator.clipboard.writeText(dressingTxt);
   console.log(dressingTxt);
 }
