@@ -9,7 +9,7 @@ Yac Nursing
 */
 
 window.onload = function () {
-  alert("Onload");
+  //alert("Onload");
 
   startTime = Math.floor(Math.random() * (1045 - 1007 + 1)) + 1007;
 
@@ -174,6 +174,54 @@ function getBmi() {
 
   document.getElementById("bmiTxt").value = bmiLevel;
 }
+window.memberData = {
+  gender: "",
+  name: "",
+  symp: "",
+  diag: "",
+  family: "",
+  famname: "",
+  famnumber: "",
+  pcp: "",
+  pcpnumb: "",
+  agencyname: "",
+  agencynumb: "",
+  mealscomp: "",
+  mealsday: "",
+  dmecomp: "",
+  dmenumb: "",
+  cane: false,
+  walker: false,
+  manualwheel: false,
+  powerwheel: false,
+  showerchair: false,
+  incontsupplies: false,
+  timeschanged: "",
+  attire: "",
+  PASschedule: "",
+  diapers: "",
+  timesbathed: "",
+  typebathing: "",
+  storedist: "",
+  livingsit: "",
+  speclaundry: "",
+  washer: false,
+  dryer: false,
+  escortneeded: "",
+  escortfreq: "",
+  escortamt: "",
+  whoisseen: "",
+  transp: "",
+  mealsday: "",
+  diet: "",
+  foodpref: "",
+  bpsys: "",
+  bpdias: "",
+  ht: "",
+  wt: "",
+  bshigh: "",
+  bslow: "",
+};
 
 document.getElementById("genderCheck").addEventListener("change", function () {
   //console.log(this.checked);
@@ -189,10 +237,11 @@ function checkGender() {
   //alert(document.getElementById("genderCheck").value);
   //const checkedBox = document.getElementById("genderCheck").value
   if (document.getElementById("genderCheck").checked) {
-    alert("Male");
+    memberData.gender = "male";
   } else {
-    alert("Female");
+    memberData.gender = "female";
   }
+  console.log("member is " + memberData.gender);
 }
 
 function start6516() {
