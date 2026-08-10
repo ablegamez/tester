@@ -265,15 +265,6 @@ function checkGender() {
   //console.log("member is " + memberData.gender);
 }
 
-// async function runStatements() {
-//   const statements = ["statement a", "statement b", "statement c"];
-//   for (i = 0; i < statements.length; i++) {
-//     await navigator.clipboard.writeText(statements[i]);
-//     alert("copied\n\n" + statements[i] + "\n\nok to continue");
-//   }
-//   alert("Done");
-// }
-
 async function start6516() {
   memberData.family = prompt(
     "Who is the family?",
@@ -281,10 +272,15 @@ async function start6516() {
   );
 
   const statements = [
-    memberData.starttext + " Bathng stuff.  " + memberData.family + ".  ",
-    memberData.starttext + " Dressing stuff.  " + memberData.family + ".  ",
-    memberData.starttext + " Feeding stuff.  " + memberData.family + ".  ",
+    memberData.starttext + retAbeHe() + " takes a shower twide a day.  ",
+    memberData.starttext + retAbeHHe() + " changes clothes twice a day.  ",
+    memberData.starttext +
+      retAbeHis() +
+      " " +
+      memberData.family +
+      " will assist with feeding.  ",
   ];
+
   for (let i = 0; i < statements.length; i++) {
     await navigator.clipboard.writeText(statements[i]);
     alert("Copied\n\n" + statements[i] + "\n\nOK to continue.");
@@ -292,15 +288,34 @@ async function start6516() {
   alert("Done");
 }
 
-function bathingText() {
-  bathingTxt = memberData.starttext + " Bathing.";
-  console.log(bathingTxt);
-  alert("Start6516\nPaste bathing.");
-  return navigator.clipboard.writeText(bathingTxt);
+function retAbeHe() {
+  if (document.getElementById("genderCheck").checked) {
+    return "he";
+  } else {
+    return "she";
+  }
 }
-function dressingText() {
-  dressingTxt = memberData.starttext + "dressing.";
-  console.log(dressingTxt);
-  alert("Paste dressing.");
-  return navigator.clipboard.writeText(dressingTxt);
+
+function retAbeHHe() {
+  if (document.getElementById("genderCheck").checked) {
+    return "He";
+  } else {
+    return "She";
+  }
+}
+
+function retAbeHis() {
+  if (document.getElementById("genderCheck").checked) {
+    return "his";
+  } else {
+    return "her";
+  }
+}
+
+function retAbeHHis() {
+  if (document.getElementById("genderCheck").checked) {
+    return "HIs";
+  } else {
+    return "Her";
+  }
 }
