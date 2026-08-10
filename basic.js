@@ -63,6 +63,7 @@ window.memberData = {
   wt: "",
   bshigh: "",
   bslow: "",
+  starttext: "",
 };
 
 function hello() {
@@ -244,6 +245,7 @@ document.getElementById("memberDxBox").addEventListener("blur", function () {
     document.getElementById("memberSymptomBox").value +
     " related to " +
     document.getElementById("memberDxBox").value;
+
   start6516();
 });
 
@@ -259,6 +261,12 @@ function checkGender() {
 }
 
 function start6516() {
+  bathingTxt =
+    memberData.name +
+    " has the following functional limitations: " +
+    memberData.symp;
+  navigator.clipboard.writeText(dressingTxt);
+
   alert("Start6516\nStarting with bathing.");
   dressingTxt =
     memberData.name +
