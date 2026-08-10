@@ -285,7 +285,7 @@ async function start6516() {
       memberData.family = prompt("Who is the family?");
     }
     await navigator.clipboard.writeText(statements[i]);
-    alert("Copied\n\n" + statements + "\n\nOK to continue.");
+    alert("Copied\n\n" + statements[i] + "\n\nOK to continue.");
   }
   alert("Done");
 }
