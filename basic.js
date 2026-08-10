@@ -230,7 +230,7 @@ document.getElementById("genderCheck").addEventListener("change", function () {
 });
 
 document.getElementById("memberNameBox").addEventListener("blur", function () {
-  member.name = document.getElementById("memberNameBox").value;
+  memberData.name = document.getElementById("memberNameBox").value;
   console.log(this.value);
 });
 
