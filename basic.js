@@ -16,6 +16,55 @@ window.onload = function () {
   document.getElementById("initialText").value = startTime.toString();
 };
 
+window.memberData = {
+  gender: "",
+  name: "",
+  symp: "",
+  diag: "",
+  family: "",
+  famname: "",
+  famnumber: "",
+  pcp: "",
+  pcpnumb: "",
+  agencyname: "",
+  agencynumb: "",
+  mealscomp: "",
+  mealsday: "",
+  dmecomp: "",
+  dmenumb: "",
+  cane: false,
+  walker: false,
+  manualwheel: false,
+  powerwheel: false,
+  showerchair: false,
+  incontsupplies: false,
+  timeschanged: "",
+  attire: "",
+  PASschedule: "",
+  diapers: "",
+  timesbathed: "",
+  typebathing: "",
+  storedist: "",
+  livingsit: "",
+  speclaundry: "",
+  washer: false,
+  dryer: false,
+  escortneeded: "",
+  escortfreq: "",
+  escortamt: "",
+  whoisseen: "",
+  transp: "",
+  mealsday: "",
+  diet: "",
+  foodpref: "",
+  bpsys: "",
+  bpdias: "",
+  ht: "",
+  wt: "",
+  bshigh: "",
+  bslow: "",
+};
+
 function hello() {
   alert("Hello World!!!");
 }
@@ -174,58 +223,15 @@ function getBmi() {
 
   document.getElementById("bmiTxt").value = bmiLevel;
 }
-window.memberData = {
-  gender: "",
-  name: "",
-  symp: "",
-  diag: "",
-  family: "",
-  famname: "",
-  famnumber: "",
-  pcp: "",
-  pcpnumb: "",
-  agencyname: "",
-  agencynumb: "",
-  mealscomp: "",
-  mealsday: "",
-  dmecomp: "",
-  dmenumb: "",
-  cane: false,
-  walker: false,
-  manualwheel: false,
-  powerwheel: false,
-  showerchair: false,
-  incontsupplies: false,
-  timeschanged: "",
-  attire: "",
-  PASschedule: "",
-  diapers: "",
-  timesbathed: "",
-  typebathing: "",
-  storedist: "",
-  livingsit: "",
-  speclaundry: "",
-  washer: false,
-  dryer: false,
-  escortneeded: "",
-  escortfreq: "",
-  escortamt: "",
-  whoisseen: "",
-  transp: "",
-  mealsday: "",
-  diet: "",
-  foodpref: "",
-  bpsys: "",
-  bpdias: "",
-  ht: "",
-  wt: "",
-  bshigh: "",
-  bslow: "",
-};
 
 document.getElementById("genderCheck").addEventListener("change", function () {
   //console.log(this.checked);
   checkGender();
+});
+
+document.getElementById("memberNameBox").addEventListener("blur", function () {
+  member.name = document.getElementById("memberNameBox").value;
+  console.log(this.value);
 });
 
 document.getElementById("memberDxBox").addEventListener("blur", function () {
