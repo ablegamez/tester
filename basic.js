@@ -245,7 +245,11 @@ document.getElementById("memberDxBox").addEventListener("blur", function () {
     document.getElementById("memberSymptomBox").value +
     " related to " +
     document.getElementById("memberDxBox").value;
-
+  memberData.starttext =
+    memberData.name +
+    " has the following functional limitations: " +
+    memberData.symp +
+    ".  ";
   start6516();
 });
 
@@ -261,17 +265,12 @@ function checkGender() {
 }
 
 function start6516() {
-  bathingTxt =
-    memberData.name +
-    " has the following functional limitations: " +
-    memberData.symp;
-  navigator.clipboard.writeText(dressingTxt);
+  bathingTxt = memberData.starttext + " Bathing.";
+  navigator.clipboard.writeText(bathingTxt);
 
-  alert("Start6516\nStarting with bathing.");
-  dressingTxt =
-    memberData.name +
-    " has the following functional limitations: " +
-    memberData.symp;
+  alert("Start6516\nPaste bathing.");
+
+  dressingTxt = memberData.starttext + "dressing.";
   navigator.clipboard.writeText(dressingTxt);
   console.log(dressingTxt);
 }
