@@ -250,8 +250,8 @@ document.getElementById("memberDxBox").addEventListener("blur", function () {
     " has the following functional limitations: " +
     memberData.symp +
     ".  ";
-  //start6516();
-  runStatements();
+  start6516();
+  //runStatements();
 });
 
 function checkGender() {
@@ -265,17 +265,30 @@ function checkGender() {
   //console.log("member is " + memberData.gender);
 }
 
-async function runStatements() {
-  const statements = ["statement a", "statement b", "statement c"];
-  for (i = 0; i < statements.length; i++) {
-    await navigator.clipboard.writeText(statements[i]);
-    alert("copied\n\n" + statements[i] + "\n\nok to continue");
+// async function runStatements() {
+//   const statements = ["statement a", "statement b", "statement c"];
+//   for (i = 0; i < statements.length; i++) {
+//     await navigator.clipboard.writeText(statements[i]);
+//     alert("copied\n\n" + statements[i] + "\n\nok to continue");
+//   }
+//   alert("Done");
+// }
+
+async function start6516() {
+  const statements = [
+    member.starttext + " Bathng stuff" + member.family,
+    member.starttext + " Dressing stuff" + member.family,
+    member.starttext + " Feeding stuff" + member.family,
+
+  ]
+  for(let i = 0; i<statements.length; i++){
+    if (i == 0){
+      member.family = prompt("Who is the family?");
+    }
+    await.navigator.clipboard.writeText(statements[i]);
+    alert("Copied\n\n" + statements + "\n\nOK to continue.");
   }
   alert("Done");
-}
-
-function start6516() {
-  bathingText().then(dressingText());
 }
 
 function bathingText() {
