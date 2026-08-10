@@ -250,7 +250,8 @@ document.getElementById("memberDxBox").addEventListener("blur", function () {
     " has the following functional limitations: " +
     memberData.symp +
     ".  ";
-  start6516();
+  //start6516();
+  runStatements();
 });
 
 function checkGender() {
@@ -262,6 +263,15 @@ function checkGender() {
     memberData.gender = "female";
   }
   //console.log("member is " + memberData.gender);
+}
+
+function runStatements() {
+  const statements = ["statement a", "statement b", "statement c"];
+  for (i=0; i<statements.length; i++){
+    await navigator.clipboard.writeText(statements[i])
+    alert("copied\n\n" + statements[i] + "\n\nok to continue");
+  }
+  alert("Done");
 }
 
 function start6516() {
