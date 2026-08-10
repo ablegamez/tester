@@ -265,10 +265,10 @@ function checkGender() {
   //console.log("member is " + memberData.gender);
 }
 
-function runStatements() {
+async function runStatements() {
   const statements = ["statement a", "statement b", "statement c"];
-  for (i=0; i<statements.length; i++){
-    await navigator.clipboard.writeText(statements[i])
+  for (i = 0; i < statements.length; i++) {
+    await navigator.clipboard.writeText(statements[i]);
     alert("copied\n\n" + statements[i] + "\n\nok to continue");
   }
   alert("Done");
