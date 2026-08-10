@@ -265,7 +265,8 @@ function checkGender() {
 }
 
 function start6516() {
-  bathingText().then(dressingText());
+  bathingText();
+  dressingText();
 }
 
 function bathingText() {
