@@ -230,8 +230,12 @@ document.getElementById("genderCheck").addEventListener("change", function () {
 });
 
 document.getElementById("memberNameBox").addEventListener("blur", function () {
-  memberData.name = document.getElementById("memberNameBox").value;
-  console.log(this.value);
+  if (memberData.gender == "male") {
+    memberData.name = "Mr. " + document.getElementById("memberNameBox").value;
+  } else {
+    memberData.name = "Ms. " + document.getElementById("memberNameBox").value;
+  }
+  console.log(memberData.name);
 });
 
 document.getElementById("memberDxBox").addEventListener("blur", function () {
