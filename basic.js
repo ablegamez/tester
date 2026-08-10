@@ -235,11 +235,15 @@ document.getElementById("memberNameBox").addEventListener("blur", function () {
   } else {
     memberData.name = "Ms. " + document.getElementById("memberNameBox").value;
   }
-  console.log(memberData.name);
+  //console.log(memberData.name);
 });
 
 document.getElementById("memberDxBox").addEventListener("blur", function () {
   //console.log(this.checked);
+  memberData.symp =
+    document.getElementById("memberSymptomBox").value +
+    " related to " +
+    document.getElementById("memberDxBox").value;
   start6516();
 });
 
@@ -251,9 +255,13 @@ function checkGender() {
   } else {
     memberData.gender = "female";
   }
-  console.log("member is " + memberData.gender);
+  //console.log("member is " + memberData.gender);
 }
 
 function start6516() {
   alert("Start6516");
+  dressingTxt =
+    memberData.name +
+    " has the following functional limitations: " +
+    memberData.symp;
 }
