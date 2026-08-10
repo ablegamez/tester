@@ -275,12 +275,15 @@ function checkGender() {
 // }
 
 async function start6516() {
-  memberData.family = prompt("Who is the family?");
+  memberData.family = prompt(
+    "Who is the family?",
+    "informal support is available.",
+  );
 
   const statements = [
-    memberData.starttext + " Bathng stuff" + memberData.family,
-    memberData.starttext + " Dressing stuff" + memberData.family,
-    memberData.starttext + " Feeding stuff" + memberData.family,
+    memberData.starttext + " Bathng stuff.  " + memberData.family + ".  ",
+    memberData.starttext + " Dressing stuff.  " + memberData.family + ".  ",
+    memberData.starttext + " Feeding stuff.  " + memberData.family + ".  ",
   ];
   for (let i = 0; i < statements.length; i++) {
     await navigator.clipboard.writeText(statements[i]);
