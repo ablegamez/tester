@@ -267,6 +267,7 @@ function checkGender() {
 function start6516() {
   bathingTxt = memberData.starttext + " Bathing.";
   navigator.clipboard.writeText(bathingTxt);
+  console.log(bathingTxt);
 
   alert("Start6516\nPaste bathing.");
 
